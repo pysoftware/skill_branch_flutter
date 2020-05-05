@@ -59,15 +59,11 @@ class UserHolder {
   }
 
   List<User> importUsers(List<String> dataList) {
-    List<User> usersData = [];
-    for (var item in dataList) {
-      List<String> userData = item.split(';').map((item) => item.trim()).toList();
-      User user =
-          User(name: userData[0], phone: userData[2], email: userData[1]);
-      usersData.add(user);
-    }
-
-    return usersData;
+    return dataList.map((item) {
+      List<String> userData =
+          item.split(';').map((item) => item.trim()).toList();
+      return User(name: userData[0], phone: userData[2], email: userData[1]);
+    }).toList();
   }
 
   User getUserByLogin(String login) {
