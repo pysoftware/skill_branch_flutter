@@ -6,6 +6,10 @@ import 'package:flutter/material.dart';
 const IMAGE_URI =
     'https://avatars.mds.yandex.net/get-yapic/63032/ryhu3VlwQKuV0xPYGpBNaLcDaE-1571886154/islands-300';
 
+const kFlutterDash =
+    'https://avatars.mds.yandex.net/get-yapic/63032/ryhu3VlwQKuV0xPYGpBNaLcDaE-1571886154/islands-300';
+
+
 class FullScreenImage extends StatelessWidget {
   final String altDescription;
   final String userName;

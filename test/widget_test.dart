@@ -1,3 +1,4 @@
+import 'package:FlutterGalleryApp/res/app_icons.dart';
 import 'package:FlutterGalleryApp/screens/photo_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -7,20 +8,21 @@ import '../lib/screens/feed_screen.dart';
 //import '../lib/screens/photo_screen.dart';
 import '../lib/widgets/widgets.dart';
 
+const kFlutterDash =
+    'https://avatars.mds.yandex.net/get-yapic/63032/ryhu3VlwQKuV0xPYGpBNaLcDaE-1571886154/islands-300';
+
 void main() {
-  // testWidgets('LikeButton', (WidgetTester tester) async {
-  //   await tester.pumpWidget(MaterialApp(home: LikeButton(likeCount: 10, isLiked: true)));
+  testWidgets('LikeButton', (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(home: LikeButton(true, 10)));
 
-  //   final titleFinder = find.text('10');
-  //   final messageFinder = find.byIcon(AppIcons.like_fill);
+    final titleFinder = find.text('10');
+    final messageFinder = find.byIcon(AppIcons.like_fill);
 
-  //   expect(titleFinder, findsOneWidget);
-  //   expect(messageFinder, findsOneWidget);
-  // });
+    expect(titleFinder, findsOneWidget);
+    expect(messageFinder, findsOneWidget);
+  });
 
   testWidgets('Photo', (WidgetTester tester) async {
-    var kFlutterDash =
-        'https://avatars.mds.yandex.net/get-yapic/63032/ryhu3VlwQKuV0xPYGpBNaLcDaE-1571886154/islands-300';
     await tester.pumpWidget(
         MaterialApp(home: Photo(photoLink: kFlutterDash, key: Key('Photo'))));
 
