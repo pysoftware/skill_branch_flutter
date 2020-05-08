@@ -79,16 +79,35 @@ class FullScreenImage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       LikeButton(true, 10),
-                      CustomButton(
-                        buttonText: 'Save',
+                      _customButton(
+                        'Save',
                       ),
-                      CustomButton(
-                        buttonText: 'Visit',
+                      _customButton(
+                        'Visit',
                       )
                     ],
                   )
                 ],
               ),
             )));
+  }
+
+  Widget _customButton(String buttonText) {
+    return GestureDetector(
+      child: Container(
+          alignment: Alignment.center,
+          width: 105,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(14)),
+              color: Colors.lightBlueAccent),
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 21),
+            child: Text(
+              '$buttonText',
+              style: TextStyle(color: Colors.white, fontSize: 14),
+            ),
+          )),
+      onTap: () => {},
+    );
   }
 }

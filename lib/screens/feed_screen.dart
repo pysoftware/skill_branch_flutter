@@ -26,7 +26,6 @@ class _FeedState extends State<Feed> {
       ),
       body: Column(
         children: <Widget>[
-            CustomButton(buttonText: 'ahah',),
             Photo(photoLink: 'https://avatars.mds.yandex.net/get-yapic/63032/ryhu3VlwQKuV0xPYGpBNaLcDaE-1571886154/islands-300',)
         ],
       ),
